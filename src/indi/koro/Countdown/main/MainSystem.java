@@ -94,7 +94,8 @@ public class MainSystem {
 	    timer.schedule(new TimerTask() {  
 		    @Override  
 		    public void run() {  
-		       MainPanel mainPanel=(MainPanel)Data.sceneMap.get("mainPanel"); 
+		       MainPanel mainPanel=(MainPanel)Data.sceneMap.get("mainPanel");
+		       Data.mainWindow.setAlwaysOnTop(true);
 		       mainPanel.reTime();
 		    }  
 		}, 100,100); 

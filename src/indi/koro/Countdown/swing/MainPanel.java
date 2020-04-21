@@ -59,13 +59,11 @@ public class MainPanel extends JPanel{
 	    Color color1=new Color(image2.getRGB(315, 10));
 	    Color color2=new Color(image2.getRGB(100, 99));
 	    Color color3=new Color(image2.getRGB(315, 99));
-	    Color color4=new Color(image2.getRGB(210, 50));
 	    int g=(color.getRed()*299+color.getBlue()*114+color.getGreen()*587+500)/1000;
 	    int g1=(color1.getRed()*299+color1.getBlue()*114+color1.getGreen()*587+500)/1000;
 	    int g2=(color2.getRed()*299+color2.getBlue()*114+color2.getGreen()*587+500)/1000;
 	    int g3=(color3.getRed()*299+color3.getBlue()*114+color3.getGreen()*587+500)/1000;
-	    int g4=(color4.getRed()*299+color4.getBlue()*114+color4.getGreen()*587+500)/1000;
-	    int allg=(g+g1+g2+g3+g4)/5;
+	    int allg=(g+g1+g2+g3)/4;
 	    if(allg<127)drawColor=Color.white;else drawColor=Color.black;
 	} catch (AWTException e) {
 	    // TODO 自动生成的 catch 块
@@ -185,7 +183,7 @@ public class MainPanel extends JPanel{
 	cal=Calendar.getInstance(TimeZone.getDefault());
 	int count=0;
 	Calendar c = Calendar.getInstance();
-	while(!(c.get(Calendar.YEAR)==2020&&c.get(Calendar.MONTH)==5&&c.get(Calendar.DAY_OF_MONTH)==7)) {
+	while(!(c.get(Calendar.YEAR)==2020&&c.get(Calendar.MONTH)==6&&c.get(Calendar.DAY_OF_MONTH)==7)) {
 	//终止时间是2020.6.7日，每次天数递增1
 	c.add(Calendar.DAY_OF_MONTH,1);
 	count++;
